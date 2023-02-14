@@ -10,4 +10,10 @@ def rollDice(rolls=1, sides=6, startZero=False):
         rollList.append(random.randrange(begin,end))
     return rollList
 
-print(rollDice(5,8))
+def rollAdvantage(sides=20):
+    return max(rollDice(2, sides))
+
+def rollDisadvantage(sides=20):
+    return min(rollDice(2, sides))
+
+print(rollDisadvantage(20))
